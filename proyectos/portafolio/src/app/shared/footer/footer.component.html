@@ -3,7 +3,9 @@
     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
       <ul class="rk-menu rk-footer-menu">
         <li class="rk-menu__item">
-          <a href="about.html" class="rk-menu__link">About</a>
+          <a routerLink="about" routerLinkActive="active" class="rk-menu__link"
+            >About</a
+          >
         </li>
         <li class="rk-menu__item">
           <a href="documentation.html" class="rk-menu__link">Docs</a>
@@ -19,18 +21,38 @@
       </p>
     </div>
     <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a href="#0" class="rk-social-btn">
+      <a
+        target="blank"
+        [href]="_infoPagService.dataInfo.facebook"
+        routerLinkActive="active"
+        class="rk-social-btn"
+      >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+      ><a
+        target="blank"
+        [href]="_infoPagService.dataInfo.twitter"
+        routerLinkActive="active"
+        class="rk-social-btn"
+      >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+      ><a
+        target="blank"
+        [href]="_infoPagService.dataInfo.instragram"
+        routerLinkActive="active"
+        class="rk-social-btn"
+      >
         <svg>
           <use
             xlink:href="assets/img/symbols.svg#icon-pinterest"
           ></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+      ><a
+        target="blank"
+        [href]="_infoPagService.dataInfo.tublr"
+        routerLinkActive="active"
+        class="rk-social-btn"
+      >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use></svg
       ></a>
@@ -39,13 +61,19 @@
       <p class="rk-footer__text rk-footer__contact">
         <span class="ae-u-bold">Email: </span
         ><span class="ae-u-bolder">
-          <a href="#0" class="rk-dark-color"
-            >contact@urkuportfolio.com
+          <a
+            href="mailTo:{{ _infoPagService.dataInfo.email }}"
+            class="rk-dark-color"
+          >
+            {{ _infoPagService.dataInfo.email }}
           </a></span
         >
       </p>
       <p class="rk-footer__text rk-footer__by">
-        Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a>
+        Theme by
+        <a target="blank" href="http://pixeden.com" class="ae-u-bolder">
+          Pixeden.
+        </a>
       </p>
     </div>
   </div>
